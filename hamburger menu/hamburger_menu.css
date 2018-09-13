@@ -1,0 +1,131 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  /* background: rgba(0,0,0,0.1);/*wireframe*/
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Sunflower", sans-serif;
+  /* color: #3A3B4A; */
+}
+
+
+/* DROPDOWN MENU: */
+.dropdown_menu {
+  /* this is the container for the hamburger icon initially: */
+    margin-left: auto;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
+}
+
+@media screen and (min-width:736px) {
+  /* then it changes into a long regular container for larger screens: */
+  .dropdown_menu {
+      display: flex;
+      align-items: center;
+      width: 30rem;
+      margin-right: 1rem;
+  }
+}
+
+/* hamburger icon for small screens:*/
+.dropbtn {
+    margin-top: 0.75rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: drop-shadow(1px 2px 0px #999999);
+  }
+
+@media screen and (min-width:736px) {
+/* hamburger icon disappears for larger screens:*/
+.dropbtn {
+    display: none;
+  }
+}
+
+/* dropdown navbar container (hidden by default) AND this is how it looks when it is :hover activated*/
+.nav_buttons {
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    min-width: 10rem;
+    box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* this is the mod to make it a non-dropdown navbar for larger screens:*/
+@media screen and (min-width:736px) {
+  .nav_buttons {
+      display: flex;
+      justify-content: space-between;
+      position: inherit;
+      box-shadow: none;
+      width: 30rem;
+  }
+}
+
+/* buttons for the dropdown menu*/
+.nav_buttons a {
+    color: #595959;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px White;
+    padding: 7px 16px;
+    background-color: #f2f2f2;
+    display: block;
+    border-bottom: 2px solid #595959;
+    border-top: 2px solid White;
+    margin-top: 2px;
+    transition: color 0.7s ease-out 0s;
+}
+
+/* buttons for the regular non-dropdown menu for larger screens:*/
+@media screen and (min-width:736px) {
+  .nav_buttons a {
+      text-shadow: 1px 1px 0px Black;
+      background-color: inherit;
+      border: none;
+      color: #b3b3b3;
+      min-width: 6rem;
+      transition: all .5s ease-out 0s;
+  }
+}
+
+/* Change color of nav buttons on hover: */
+.nav_buttons a:hover {
+  background-color: #2F4073;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0px Black;
+ }
+
+/*but not for the regular non-dropdown menu:*/
+@media screen and (min-width:736px) {
+.nav_buttons a:hover {
+  background-color: inherit;
+  }
+}
+
+.nav_buttons a:active {
+  /*this doesn't effect large screen version, not sure why: */
+  background-color: Blue;
+  }
+
+/* Show the dropdown menu on hover */
+.dropdown_menu:hover .nav_buttons {display: block;}
+
+/* And finally this prevents the menu from turning back into dropdown mode at large screen size:*/
+@media screen and (min-width:736px) {
+  .dropdown_menu:hover .nav_buttons {
+    display: inherit;
+  }
+}
+/*END OF DROPDOWN MENU SECTION*/

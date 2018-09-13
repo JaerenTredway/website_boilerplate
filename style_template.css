@@ -1,0 +1,42 @@
+
+/* UNIVERSAL STYLES: */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* WIREFRAME: */
+* {
+  /* background: rgba(0,0,0,0.1); */
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Sunflower", sans-serif;
+  /* color: #3A3B4A; */
+}
+
+/* Palette UID: 13O0u0kllll2XhDc9jvuxnbSap2 */
+/* PALLET:
+#042587
+#132E7D
+#2F4073
+#464E69
+#57595F
+*/
+
+/* HEADER: */
+
+main {
+  position: relative;
+  top: 4.5rem;
+}
+
+/* LANDING SECTION: */
+
+/* CONTENT SECTION: */
+
+/* FOOTER */
